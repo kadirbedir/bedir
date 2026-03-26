@@ -1,106 +1,1590 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Corporate Style Page</title>
-    <style>
-        :root {
-            --dark: #0F1419;
-            --accent: #2563EB;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: var(--dark);
-            padding: 10px 0;
-        }
-        nav a {
-            color: var(--accent);
-            padding: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #fff;
-            background-color: var(--accent);
-        }
-        footer {
-            background-color: var(--dark);
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        section {
-            padding: 20px;
-            margin: 10px auto;
-            max-width: 800px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: var(--accent);
-            color: white;
-        }
-        button {
-            background-color: var(--accent);
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        button:hover {
-            background-color: #205b9f;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEDİR Aydınlatma Elektrik — 2026 Ürün Kataloğu</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    /* Ana Renk Değişimi */
+    --parliament-blue: #002147; /* Klasik, derin parlament mavisi */
+    --dark: #001630;            /* Daha koyu bir ton (alt katmanlar için) */
+    --dark-2: #002B5B;          /* Biraz daha açık/canlı bir mavi tonu */
+    
+    /* Mevcut Altın Tonları (Maviyle harika uyum sağlar) */
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #F5EDD6;
+    
+    /* Diğer Yardımcı Renkler */
+    --mid: #1A3C63;
+    --light: #F8F9FA;
+    --white: #FFFFFF;
+    --text-muted: #8E9AAF;
+    --border: rgba(201, 168, 76, 0.3);
+}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--light);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,15,15,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 60px;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .logo-wrap { display: flex; align-items: center; gap: 14px; }
+  .logo-icon {
+    width: 44px; height: 44px;
+    background: var(--gold);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; font-size: 18px;
+    color: var(--dark);
+  }
+  .logo-text { font-family: 'Playfair Display', serif; font-size: 20px; letter-spacing: 0.05em; }
+  .logo-sub { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-top: 2px; }
+
+  nav { display: flex; gap: 36px; }
+  nav a {
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 80% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 50%);
+  }
+
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.03;
+    background-image: linear-gradient(var(--gold) 1px, transparent 1px), linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .hero-content { position: relative; max-width: 680px; }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+    border-radius: 2px;
+    margin-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 6vw, 88px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .hero h1 em {
+    font-style: italic; color: var(--gold);
+  }
+
+  .hero p {
+    font-size: 16px; line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 50px;
+  }
+
+  .hero-stats {
+    display: flex; gap: 48px;
+  }
+
+  .stat-item { }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; color: var(--gold);
+    display: block;
+  }
+  .stat-label {
+    font-size: 11px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--text-muted);
+    display: block; margin-top: 4px;
+  }
+
+  .hero-visual {
+    position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
+    width: 420px;
+  }
+
+  .hero-light-ring {
+    width: 300px; height: 300px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(var(--dark), var(--dark)) padding-box,
+                linear-gradient(135deg, var(--gold), transparent 50%, var(--gold-light)) border-box;
+    margin: 60px auto;
+    position: relative;
+    animation: rotateSlow 20s linear infinite;
+  }
+
+  .hero-light-ring::before {
+    content: '';
+    position: absolute; inset: 20px;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 50%;
+  }
+
+  .hero-light-ring::after {
+    content: '';
+    position: absolute; inset: -20px;
+    border: 1px solid rgba(201,168,76,0.08);
+    border-radius: 50%;
+  }
+
+  @keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* ── SECTION TITLES ── */
+  .section { padding: 100px 60px; }
+
+  .section-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 64px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-tag {
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .section-count {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px; color: var(--dark-3);
+    font-weight: 700; line-height: 1;
+    user-select: none;
+  }
+
+  /* ── CATEGORY NAV ── */
+  .cat-nav {
+    background: var(--dark-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 0 60px;
+    display: flex; gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: sticky; top: 72px; z-index: 50;
+  }
+
+  .cat-nav::-webkit-scrollbar { display: none; }
+
+  .cat-btn {
+    padding: 20px 28px;
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    border: none; background: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .cat-btn:hover, .cat-btn.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ── CATEGORY SECTION ── */
+  .cat-section {
+    padding: 80px 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .cat-section-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 48px;
+  }
+
+  .cat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px; font-weight: 700;
+    color: var(--dark-3);
+    line-height: 1; user-select: none;
+  }
+
+  .cat-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; font-weight: 400;
+  }
+
+  .cat-info p {
+    font-size: 13px; color: var(--text-muted);
+    margin-top: 6px; letter-spacing: 0.05em;
+  }
+
+  .cat-divider {
+    height: 1px; background: var(--border); flex: 1;
+  }
+
+  /* ── PRODUCT TABLE ── */
+  .product-group { margin-bottom: 56px; }
+
+  .product-group-title {
+    font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 16px;
+  }
+
+  .product-group-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .product-table thead tr {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .product-table th {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 500;
+    padding: 12px 20px; text-align: left;
+    background: var(--dark-2);
+  }
+
+  .product-table th:last-child { text-align: right; }
+
+  .product-table td {
+    padding: 16px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    transition: background 0.2s;
+  }
+
+  .product-table tr:hover td {
+    background: rgba(201,168,76,0.03);
+  }
+
+  .product-table td:first-child {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; letter-spacing: 0.1em;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+  }
+
+  .product-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: var(--gold-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+  }
+
+  .product-table .price-secondary {
+    color: var(--text-muted); font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ── CARDS GRID (for some categories) ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2px;
+    margin-bottom: 40px;
+  }
+
+  .product-card {
+    background: var(--dark-2);
+    padding: 28px 24px;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+
+  .product-card:hover { background: var(--dark-3); }
+  .product-card:hover::before { opacity: 1; }
+
+  .card-code {
+    font-size: 11px; letter-spacing: 0.15em;
+    color: var(--gold); font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .card-spec {
+    font-size: 14px; color: var(--light);
+    margin-bottom: 16px; line-height: 1.6;
+  }
+
+  .card-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; color: var(--gold-light);
+  }
+
+  .card-price-rgb {
+    font-size: 12px; color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* ── SPLIT LAYOUT ── */
+  .split-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    border: 1px solid var(--border);
+    padding: 18px 24px;
+    border-left: 3px solid var(--gold);
+    font-size: 13px; color: var(--text-muted);
+    margin-bottom: 40px;
+    background: rgba(201,168,76,0.03);
+  }
+
+  .note-box strong { color: var(--light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark-2);
+    border-top: 1px solid var(--border);
+    padding: 80px 60px 48px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand .logo-wrap { margin-bottom: 20px; }
+
+  .footer-brand p {
+    font-size: 14px; color: var(--text-muted);
+    line-height: 1.8; max-width: 320px;
+  }
+
+  .footer-col h4 {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+
+  .footer-col p, .footer-col a {
+    font-size: 14px; color: var(--text-muted);
+    line-height: 2; text-decoration: none; display: block;
+    transition: color 0.3s;
+  }
+
+  .footer-col a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .footer-bottom p { font-size: 12px; color: var(--text-muted); }
+
+  .cert-badges {
+    display: flex; gap: 12px; align-items: center;
+  }
+
+  .cert-badge {
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    border: 1px solid var(--border); padding: 6px 12px;
+    color: var(--text-muted); border-radius: 2px;
+  }
+
+  /* ── SCROLL ANIMATION ── */
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: none; }
+
+  /* ── BACK TO TOP ── */
+  .back-top {
+    position: fixed; bottom: 36px; right: 36px; z-index: 200;
+    width: 48px; height: 48px;
+    background: var(--gold);
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: 18px; color: var(--dark);
+  }
+  .back-top.show { opacity: 1; pointer-events: all; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    header { padding: 0 30px; }
+    .hero { padding: 120px 30px 80px; }
+    .hero-visual { display: none; }
+    .section, .cat-section { padding: 60px 30px; }
+    .cat-nav { padding: 0 30px; }
+    footer { padding: 60px 30px 32px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .split-table { grid-template-columns: 1fr; }
+    nav { display: none; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-stats { flex-direction: column; gap: 24px; }
+    .cat-section-header { grid-template-columns: auto 1fr; }
+    .cat-number { font-size: 52px; }
+    .card-grid { grid-template-columns: 1fr; }
+    .product-table { font-size: 13px; }
+    .product-table td, .product-table th { padding: 12px 10px; }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Corporate Site</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section>
-        <h2>Our Services</h2>
-        <p>We offer high-quality corporate services to meet your needs.</p>
-        <table>
-            <tr>
-                <th>Service</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Consulting</td>
-                <td>Expert advice for your business decisions.</td>
-            </tr>
-            <tr>
-                <td>Development</td>
-                <td>Professional development services tailored for your needs.</td>
-            </tr>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">BDR</div>
+    <div>
+      <span class="logo-text">BEDİR Aydınlatma Elektrik</span>
+      <span class="logo-sub">İstanbul · Türkiye</span>
+    </div>
+  </div>
+  <nav>
+    <a href="#wallwasher">Wallwasher</a>
+    <a href="#bahce">Bahçe</a>
+    <a href="#linear">Linear</a>
+    <a href="#dekoratif">Dekoratif</a>
+    <a href="#kuyumcu">Kuyumcu</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content fade-in">
+    <span class="hero-tag">2026 Ürün Kataloğu</span>
+    <h1>Estetiğin<br>En <em>Parlak</em><br>Hali</h1>
+    <p>İç ve dış mekan özel tasarım aydınlatmalarında estetik, sağlamlık ve rengarenk çözümler. ISO 9001 & 14001 sertifikalı yerli üretim.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">200+</span>
+        <span class="stat-label">Ürün Modeli</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24</span>
+        <span class="stat-label">Kategori Sayfası</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">Ra>80</span>
+        <span class="stat-label">Renk Doğruluk</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-light-ring"></div>
+  </div>
+</section>
+
+<!-- CATEGORY NAV -->
+<div class="cat-nav">
+  <button class="cat-btn active" onclick="scrollTo('wallwasher')">Wallwasher</button>
+  <button class="cat-btn" onclick="scrollTo('bahce')">Bahçe</button>
+  <button class="cat-btn" onclick="scrollTo('zemin')">Zemin & Havuz</button>
+  <button class="cat-btn" onclick="scrollTo('linear-hp')">Linear HP</button>
+  <button class="cat-btn" onclick="scrollTo('linear-siva')">Sıva Altı</button>
+  <button class="cat-btn" onclick="scrollTo('sarkit')">Sarkıt</button>
+  <button class="cat-btn" onclick="scrollTo('kare')">Kare / Dikdörtgen</button>
+  <button class="cat-btn" onclick="scrollTo('dekoratif')">Dekoratif</button>
+  <button class="cat-btn" onclick="scrollTo('simit')">Simit / Yuvarlak</button>
+  <button class="cat-btn" onclick="scrollTo('davul')">Davul</button>
+  <button class="cat-btn" onclick="scrollTo('kanopi')">Kanopi & Ray</button>
+  <button class="cat-btn" onclick="scrollTo('bar')">Bar LED</button>
+  <button class="cat-btn" onclick="scrollTo('flut')">Flüt / Aplik</button>
+  <button class="cat-btn" onclick="scrollTo('kuyumcu')">Kuyumcu</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 01 · WALLWASHER -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="wallwasher">
+  <div class="cat-section-header">
+    <div class="cat-number">01</div>
+    <div class="cat-info">
+      <h2>Wallwasher</h2>
+      <p>Duvar boyama — Sıva üstü & sıva altı modeller · RGB seçenekli</p>
+    </div>
+  </div>
+
+  <!-- Sıva Üstü -->
+  <div class="product-group fade-in">
+    <div class="product-group-title">Sıva Üstü Wallwasher</div>
+    <div class="note-box"><strong>Not:</strong> Siyah Kasa Wallwasher Hazır Stok Mevcuttur.</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-101</div><div class="card-spec">12 CM — 3 W</div><div class="card-price">17,75 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-102</div><div class="card-spec">20 CM — 6 W</div><div class="card-price">23,05 $</div><div class="card-price-rgb">RGB: 38,75 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-103</div><div class="card-spec">30 CM — 9 W</div><div class="card-price">26,75 $</div><div class="card-price-rgb">RGB: 41,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-104</div><div class="card-spec">35 CM — 12 W</div><div class="card-price">31,50 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-105</div><div class="card-spec">50 CM — 18 W</div><div class="card-price">41,00 $</div><div class="card-price-rgb">RGB: 59,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-106</div><div class="card-spec">67 CM — 24 W</div><div class="card-price">50,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-107</div><div class="card-spec">100 CM — 36 W</div><div class="card-price">66,75 $</div><div class="card-price-rgb">RGB: 88,75 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-108</div><div class="card-spec">120 CM — 45 W</div><div class="card-price">99,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-109</div><div class="card-spec">150 CM — 54 W</div><div class="card-price">118,00 $</div></div>
+    </div>
+  </div>
+
+  <!-- Sıva Altı -->
+  <div class="product-group fade-in">
+    <div class="product-group-title">Sıva Altı Wallwasher</div>
+    <div class="split-table">
+      <div>
+        <table class="product-table">
+          <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Kasa Ölçü</th><th>Fiyat</th></tr></thead>
+          <tbody>
+            <tr><td>BDR-121</td><td>3 W</td><td>A:170 / B:110</td><td>65,50 $</td></tr>
+            <tr><td>BDR-122</td><td>6 W</td><td>A:240 / B:180</td><td>78,75 $</td></tr>
+            <tr><td>BDR-123</td><td>9 W</td><td>A:320 / B:260</td><td>102,00 $</td></tr>
+            <tr><td>BDR-124</td><td>12 W</td><td>A:395 / B:335</td><td>121,00 $</td></tr>
+            <tr><td>BDR-125</td><td>18 W</td><td>A:550 / B:490</td><td>134,00 $</td></tr>
+            <tr><td>BDR-126</td><td>24 W</td><td>A:710 / B:650</td><td>190,00 $</td></tr>
+            <tr><td>BDR-127</td><td>36 W</td><td>A:1030 / B:970</td><td>237,00 $</td></tr>
+          </tbody>
         </table>
-        <button>Contact Us</button>
-    </section>
-    <footer>
-        <p>&copy; 2026 Corporate Company. All rights reserved.</p>
-    </footer>
+      </div>
+      <div>
+        <table class="product-table">
+          <thead><tr><th>Kod</th><th>Beton Kutu</th><th>E Ölçü</th><th>Fiyat</th></tr></thead>
+          <tbody>
+            <tr><td>BDR-121K</td><td>3 W</td><td>E:130</td><td>7,75 $</td></tr>
+            <tr><td>BDR-122K</td><td>6 W</td><td>E:200</td><td>8,75 $</td></tr>
+            <tr><td>BDR-123K</td><td>9 W</td><td>E:280</td><td>10,00 $</td></tr>
+            <tr><td>BDR-124K</td><td>12 W</td><td>E:350</td><td>12,50 $</td></tr>
+            <tr><td>BDR-125K</td><td>18 W</td><td>E:510</td><td>16,00 $</td></tr>
+            <tr><td>BDR-126K</td><td>24 W</td><td>E:670</td><td>19,50 $</td></tr>
+            <tr><td>BDR-127K</td><td>36 W</td><td>E:990</td><td>26,50 $</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wallwasher Yeni (02) -->
+<section class="cat-section" id="wallwasher2">
+  <div class="cat-section-header">
+    <div class="cat-number">02</div>
+    <div class="cat-info">
+      <h2>Wallwasher — Yeni Seri</h2>
+      <p>İç & Dış Mekan Duvar Boyama · Kumandalı · Döner Cam · IP67 Etanj</p>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">İç Mekan Duvar Boyama — Kumandalı Döner Cam</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-151</div><div class="card-spec">50 CM — 16 W</div><div class="card-price">220,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-152</div><div class="card-spec">100 CM — 32 W</div><div class="card-price">360,00 $</div></div>
+    </div>
+  </div>
+  <div class="product-group fade-in">
+    <div class="product-group-title">Dış Mekan Duvar Boyama — Kumandalı</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-181</div><div class="card-spec">50 CM — 16 W</div><div class="card-price">290,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-182</div><div class="card-spec">100 CM — 32 W</div><div class="card-price">415,00 $</div></div>
+    </div>
+  </div>
+  <div class="product-group fade-in">
+    <div class="product-group-title">IP 67 Etanj Armatür — Polikarbon Gövde</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-1700</div><div class="card-spec">60 CM — 22 W</div><div class="card-price">23,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1701</div><div class="card-spec">120 CM — 45 W</div><div class="card-price">32,00 $</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 03-04 · BAHÇE -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="bahce">
+  <div class="cat-section-header">
+    <div class="cat-number">03</div>
+    <div class="cat-info">
+      <h2>Bahçe Aydınlatma</h2>
+      <p>Sıva üstü · Döküm kasa · Çim kazık · Dış mekan</p>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Döküm Kasa Bahçe Spot</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-1501</div><div class="card-spec">6 W Döküm Kasa</div><div class="card-price">80,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1502</div><div class="card-spec">9 W Döküm Kasa</div><div class="card-price">110,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1503</div><div class="card-spec">18 W Döküm Kasa</div><div class="card-price">160,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Sıva Üstü Bahçe Spot</div>
+    <table class="product-table">
+      <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+      <tbody>
+        <tr><td>BDR-171</td><td>3 W</td><td>31,00 $</td></tr>
+        <tr><td>BDR-172</td><td>6 W</td><td>47,00 $</td></tr>
+        <tr><td>BDR-173</td><td>9 W</td><td>48,25 $</td></tr>
+        <tr><td>BDR-174</td><td>12 W</td><td>61,50 $</td></tr>
+        <tr><td>BDR-175</td><td>18 W</td><td>87,00 $</td></tr>
+        <tr><td>BDR-176</td><td>24 W</td><td>121,50 $</td></tr>
+        <tr><td>BDR-177</td><td>36 W</td><td>137,00 $</td></tr>
+        <tr><td>BDR-178</td><td>16 CM Çim Kazık</td><td>4,75 $</td></tr>
+        <tr><td>BDR-178-L</td><td>26,5 CM Çim Kazık</td><td>9,50 $</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Bahçe Aydınlatma — Özel</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-198</div><div class="card-spec">6 W — 23 CM</div><div class="card-price">30,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-199</div><div class="card-spec">12 W — 23 CM</div><div class="card-price">62,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-199</div><div class="card-spec">6 W (Yay Tip)</div><div class="card-price">30,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-159</div><div class="card-spec">12 × 1 — 12 W</div><div class="card-price">65,00 $</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 05 · ZEMİN & HAVUZ -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="zemin">
+  <div class="cat-section-header">
+    <div class="cat-number">05</div>
+    <div class="cat-info">
+      <h2>Zemin & Havuz Aydınlatma</h2>
+      <p>Sıva altı zemin · Havuz LED · Su altı uyumlu</p>
+    </div>
+  </div>
+
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Sıva Altı Zemin</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-191</td><td>1 W</td><td>32,00 $</td></tr>
+          <tr><td>BDR-192</td><td>3 W</td><td>41,50 $</td></tr>
+          <tr><td>BDR-193</td><td>6 W</td><td>41,50 $</td></tr>
+          <tr><td>BDR-194</td><td>9 W</td><td>66,50 $</td></tr>
+          <tr><td>BDR-195</td><td>12 W</td><td>72,50 $</td></tr>
+          <tr><td>BDR-196</td><td>18 W</td><td>126,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Havuz LED Aydınlatma</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-201</td><td>12V — 3 W</td><td>42,00 $</td></tr>
+          <tr><td>BDR-202</td><td>12V — 9 W</td><td>64,00 $</td></tr>
+          <tr><td>BDR-203</td><td>24V — 18 W</td><td>135,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 06 · HIGH POWER LINEAR -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="linear-hp">
+  <div class="cat-section-header">
+    <div class="cat-number">06</div>
+    <div class="cat-info">
+      <h2>High Power Linear Aydınlatma</h2>
+      <p>Yüksek güçlü sarkıt & sıva üstü modeller</p>
+    </div>
+  </div>
+
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Seri I (BDR-311 serisi)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-311</td><td>66 CM — 23 W</td><td>46,50 $</td></tr>
+          <tr><td>BDR-312</td><td>120 CM — 40 W</td><td>68,00 $</td></tr>
+          <tr><td>BDR-313</td><td>173 CM — 60 W</td><td>93,00 $</td></tr>
+          <tr><td>BDR-314</td><td>225 CM — 75 W</td><td>111,00 $</td></tr>
+          <tr><td>BDR-315</td><td>280 CM — 95 W</td><td>150,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Seri II (BDR-321 serisi)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-321</td><td>14 CM — 5 W</td><td>27,50 $</td></tr>
+          <tr><td>BDR-322</td><td>28 CM — 10 W</td><td>39,50 $</td></tr>
+          <tr><td>BDR-323</td><td>66 CM — 25 W</td><td>65,50 $</td></tr>
+          <tr><td>BDR-324</td><td>105 CM — 40 W</td><td>94,00 $</td></tr>
+          <tr><td>BDR-325</td><td>118 CM — 45 W</td><td>106,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="product-group fade-in">
+    <div class="product-group-title">Seri III — Sarkıt (BDR-301)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-301</div><div class="card-spec">60 CM — 40 W</div><div class="card-price">68,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-302</div><div class="card-spec">120 CM — 80 W</div><div class="card-price">105,00 $</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 07 · SIVA ALTI LINEAR -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="linear-siva">
+  <div class="cat-section-header">
+    <div class="cat-number">07</div>
+    <div class="cat-info">
+      <h2>Sıva Altı Linear Aydınlatma</h2>
+      <p>İki farklı profil serisi — 60 CM'den 300 CM'ye</p>
+    </div>
+  </div>
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Profil A (ESR-341)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-341</td><td>60 CM — 18 W</td><td>36,00 $</td></tr>
+          <tr><td>BDR-342</td><td>80 CM — 24 W</td><td>42,00 $</td></tr>
+          <tr><td>BDR-343</td><td>100 CM — 30 W</td><td>49,00 $</td></tr>
+          <tr><td>BDR-344</td><td>120 CM — 36 W</td><td>56,00 $</td></tr>
+          <tr><td>BDR-345</td><td>150 CM — 45 W</td><td>68,00 $</td></tr>
+          <tr><td>BDR-346</td><td>180 CM — 54 W</td><td>80,00 $</td></tr>
+          <tr><td>BDR-347</td><td>200 CM — 60 W</td><td>84,00 $</td></tr>
+          <tr><td>BDR-348</td><td>250 CM — 75 W</td><td>118,00 $</ td></tr>
+          <tr><td>BDR-349</td><td>300 CM — 90 W</td><td>133,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Profil B (ESR-361)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-361</td><td>60 CM — 18 W</td><td>34,00 $</td></tr>
+          <tr><td>BDR-362</td><td>80 CM — 24 W</td><td>41,00 $</td></tr>
+          <tr><td>BDR-363</td><td>100 CM — 30 W</td><td>47,00 $</td></tr>
+          <tr><td>BDR-364</td><td>120 CM — 36 W</td><td>53,00 $</td></tr>
+          <tr><td>BDR-365</td><td>150 CM — 45 W</td><td>65,00 $</td></tr>
+          <tr><td>BDR-366</td><td>180 CM — 54 W</td><td>74,00 $</td></tr>
+          <tr><td>BDR-367</td><td>200 CM — 60 W</td><td>79,00 $</td></tr>
+          <tr><td>BDR-368</td><td>250 CM — 75 W</td><td>108,00 $</td></tr>
+          <tr><td>BDR-369</td><td>300 CM — 90 W</td><td>120,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 08-09 · SARKIT LINEAR -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="sarkit">
+  <div class="cat-section-header">
+    <div class="cat-number">08</div>
+    <div class="cat-info">
+      <h2>Sıva Üstü Sarkıt Linear</h2>
+      <p>Üç farklı profil boyutu — Ofis, mağaza ve endüstriyel kullanım</p>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Profil 50×50 (ESR-381 Serisi)</div>
+    <table class="product-table">
+      <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+      <tbody>
+        <tr><td>BDR-381</td><td>60 CM — 18 W</td><td>38,00 $</td></tr>
+        <tr><td>BDR-382</td><td>80 CM — 24 W</td><td>42,00 $</td></tr>
+        <tr><td>BDR-383</td><td>100 CM — 30 W</td><td>45,50 $</td></tr>
+        <tr><td>BDR-384</td><td>120 CM — 36 W</td><td>54,60 $</td></tr>
+        <tr><td>BDR-385</td><td>150 CM — 45 W</td><td>68,25 $</td></tr>
+        <tr><td>BDR-386</td><td>180 CM — 54 W</td><td>81,90 $</td></tr>
+        <tr><td>BDR-387</td><td>200 CM — 60 W</td><td>91,00 $</td></tr>
+        <tr><td>BDR-388</td><td>250 CM — 75 W</td><td>113,75 $</td></tr>
+        <tr><td>BDR-389</td><td>300 CM — 90 W</td><td>136,50 $</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Profil 50×80 (ESR-401 Serisi)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-401</td><td>60 CM — 18 W</td><td>36,00 $</td></tr>
+          <tr><td>BDR-402</td><td>80 CM — 24 W</td><td>47,20 $</td></tr>
+          <tr><td>BDR-403</td><td>100 CM — 30 W</td><td>53,00 $</td></tr>
+          <tr><td>BDR-404</td><td>120 CM — 36 W</td><td>71,00 $</td></tr>
+          <tr><td>BDR-405</td><td>150 CM — 45 W</td><td>88,00 $</td></tr>
+          <tr><td>BDR-406</td><td>180 CM — 54 W</td><td>106,00 $</td></tr>
+          <tr><td>BDR-407</td><td>200 CM — 60 W</td><td>118,00 $</td></tr>
+          <tr><td>BDR-408</td><td>250 CM — 75 W</td><td>147,50 $</td></tr>
+          <tr><td>BDR-409</td><td>300 CM — 90 W</td><td>177,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Profil 85×85 (ESR-421 Serisi)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-421</td><td>60 CM — 25 W</td><td>60,00 $</td></tr>
+          <tr><td>BDR-422</td><td>80 CM — 33 W</td><td>75,00 $</td></tr>
+          <tr><td>BDR-423</td><td>100 CM — 42 W</td><td>90,00 $</td></tr>
+          <tr><td>BDR-424</td><td>120 CM — 50 W</td><td>112,00 $</td></tr>
+          <tr><td>BDR-425</td><td>150 CM — 63 W</td><td>135,00 $</td></tr>
+          <tr><td>BDR-426</td><td>180 CM — 75 W</td><td>155,00 $</td></tr>
+          <tr><td>BDR-427</td><td>200 CM — 85 W</td><td>172,00 $</td></tr>
+          <tr><td>BDR-428</td><td>250 CM — 105 W</td><td>204,00 $</td></tr>
+          <tr><td>BDR-429</td><td>300 CM — 125 W</td><td>245,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 09 Seri -->
+  <div class="cat-section-header" style="margin-top:60px;">
+    <div class="cat-number">09</div>
+    <div class="cat-info"><h2>Sarkıt — Geniş Profil Serisi</h2><p>85×75 ve 100×75 profil</p></div>
+  </div>
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Profil 85×75 (BDR-441)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-441</td><td>60 CM — 18 W</td><td>76,00 $</td></tr>
+          <tr><td>BDR-442</td><td>70 CM — 21 W</td><td>83,00 $</td></tr>
+          <tr><td>BDR-443</td><td>80 CM — 25 W</td><td>93,00 $</td></tr>
+          <tr><td>BDR-444</td><td>90 CM — 27 W</td><td>100,00 $</td></tr>
+          <tr><td>BDR-445</td><td>100 CM — 32 W</td><td>112,00 $</td></tr>
+          <tr><td>BDR-446</td><td>120 CM — 40 W</td><td>129,00 $</td></tr>
+          <tr><td>BDR-447</td><td>150 CM — 45 W</td><td>160,00 $</td></tr>
+          <tr><td>BDR-448</td><td>200 CM — 60 W</td><td>208,00 $</ td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Profil 100×75 (BDR-461)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-461</td><td>60 CM — 25 W</td><td>64,00 $</td></tr>
+          <tr><td>BDR-462</td><td>80 CM — 33 W</td><td>73,00 $</td></tr>
+          <tr><td>BDR-463</td><td>100 CM — 42 W</td><td>88,00 $</td></tr>
+          <tr><td>BDR-464</td><td>120 CM — 50 W</td><td>105,60 $</td></tr>
+          <tr><td>BDR-465</td><td>150 CM — 63 W</td><td>132,00 $</td></tr>
+          <tr><td>BDR-466</td><td>180 CM — 75 W</td><td>158,40 $</td></tr>
+          <tr><td>BDR-467</td><td>200 CM — 85 W</td><td>176,00 $</td></tr>
+          <tr><td>BDR-468</td><td>250 CM — 105 W</td><td>220,00 $</td></tr>
+          <tr><td>BDR-469</td><td>300 CM — 125 W</td><td>264,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 10 · KARE / DİKDÖRTGEN -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="kare">
+  <div class="cat-section-header">
+    <div class="cat-number">10</div>
+    <div class="cat-info">
+      <h2>Kare & Dikdörtgen Linear</h2>
+      <p>40×40'dan 200×200'e · Frame tipi sarkıt armatürler</p>
+    </div>
+  </div>
+
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Kare Linear (BDR-521)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ölçü / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-521</td><td>40×40 — 45 W</td><td>104,00 $</td></tr>
+          <tr><td>BDR-522</td><td>50×50 — 60 W</td><td>116,00 $</td></tr>
+          <tr><td>BDR-523</td><td>60×60 — 70 W</td><td>135,00 $</td></tr>
+          <tr><td>BDR-524</td><td>70×70 — 80 W</td><td>157,00 $</td></tr>
+          <tr><td>BDR-525</td><td>80×80 — 95 W</td><td>179,00 $</td></tr>
+          <tr><td>BDR-526</td><td>90×90 — 100 W</td><td>203,00 $</td></tr>
+          <tr><td>BDR-527</td><td>100×100 — 115 W</td><td>224,00 $</td></tr>
+          <tr><td>BDR-528</td><td>110×110 — 125 W</td><td>247,00 $</td></tr>
+          <tr><td>BDR-529</td><td>120×120 — 140 W</td><td>269,00 $</ td></tr>
+          <tr><td>BDR-530</td><td>150×150 — 180 W</td><td>335,00 $</td></tr>
+          <tr><td>BDR-531</td><td>180×180 — 215 W</td><td>404,00 $</td></tr>
+          <tr><td>BDR-532</td><td>200×200 — 240 W</td><td>448,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Dikdörtgen Linear (ESR-541)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ölçü / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-541</td><td>30×60 — 50 W</td><td>112,00 $</td></tr>
+          <tr><td>BDR-542</td><td>30×90 — 70 W</td><td>134,00 $</td></tr>
+          <tr><td>BDR-543</td><td>30×120 — 90 W</td><td>168,00 $</td></tr>
+          <tr><td>BDR-544</td><td>60×120 — 105 W</td><td>202,00 $</td></tr>
+          <tr><td>BDR-545</td><td>60×180 — 140 W</td><td>269,00 $</td></tr>
+          <tr><td>BDR-546</td><td>60×240 — 180 W</td><td>336,00 $</td></tr>
+          <tr><td>BDR-547</td><td>80×160 — 140 W</td><td>269,00 $</td></tr>
+          <tr><td>BDR-548</td><td>80×240 — 190 W</td><td>358,00 $</td></tr>
+          <tr><td>BDR-549</td><td>100×200 — 180 W</td><td>336,00 $</td></tr>
+          <tr><td>BDR-550</td><td>120×240 — 215 W</td><td>404,00 $</td></tr>
+          <tr><td>BDR-551</td><td>150×300 — 270 W</td><td>503,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 11-13 · DEKORATİF LINEAR -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="dekoratif">
+  <div class="cat-section-header">
+    <div class="cat-number">11</div>
+    <div class="cat-info">
+      <h2>Dekoratif Linear Aydınlatma</h2>
+      <p>Altıgen · X · Üçgen · Y · Cross · Hasır · Snag · Labirent · Infinity</p>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Altıgen (BDR-561)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-561</div><div class="card-spec">ø60 — 30 CM kenar — 50 W</div><div class="card-price">122,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-562</div><div class="card-spec">ø90 — 45 CM kenar — 80 W</div><div class="card-price">182,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-563</div><div class="card-spec">ø120 — 60 CM kenar — 105 W</div><div class="card-price">243,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">X Formu (BDR-581)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-581</div><div class="card-spec">60×60 — 35 W</div><div class="card-price">99,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-582</div><div class="card-spec">90×90 — 50 W</div><div class="card-price">125,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-583</div><div class="card-spec">120×120 — 75 W</div><div class="card-price">163,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Üçgen (BDR-601)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-601</div><div class="card-spec">60×60×60 — 50 W</div><div class="card-price">111,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-602</div><div class="card-spec">90×90×90 — 80 W</div><div class="card-price">167,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-603</div><div class="card-spec">120×120×120 — 80 W</div><div class="card-price">224,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Y Formu (BDR-621)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-621</div><div class="card-spec">45×45×45 ø90 — 40 W</div><div class="card-price">111,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-622</div><div class="card-spec">60×60×60 ø120 — 55 W</div><div class="card-price">117,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-623</div><div class="card-spec">90×90×90 ø180 — 80 W</div><div class="card-price">175,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Cross Knitting (BDR-641)</div>
+    <table class="product-table">
+      <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+      <tbody>
+        <tr><td>BDR-641</td><td>60 CM — 70 W Cross</td><td>175,00 $</td></tr>
+        <tr><td>BDR-642</td><td>100 CM — 120 W Cross</td><td>280,00 $</td></tr>
+        <tr><td>BDR-643</td><td>120 CM — 140 W Cross</td><td>335,00 $</td></tr>
+        <tr><td>BDR-644</td><td>150 CM — 1500 W Cross</td><td>420,00 $</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Hasır (BDR-661)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-661</div><div class="card-spec">60 CM — 70 W Hasır</div><div class="card-price">205,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-662</div><div class="card-spec">80 CM — 90 W Hasır</div><div class="card-price">240,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-663</div><div class="card-spec">100 CM — 110 W Hasır</div><div class="card-price">275,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Snag (BDR-681) & Integradet (BDR-701)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-681</div><div class="card-spec">155 CM — 70 W Snag</div><div class="card-price">226,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-682</div><div class="card-spec">225 CM — 115 W Snag</div><div class="card-price">330,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-683</div><div class="card-spec">295 CM — 145 W Snag</div><div class="card-price">417,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-701</div><div class="card-spec">135 W Integradet</div><div class="card-price">405,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Büyük Kompozisyonlar</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-721</div><div class="card-spec">185 W — Labirent (530×1010 cm)</div><div class="card-price">521,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-741</div><div class="card-spec">170 W — Unstable (430×1430 cm)</div><div class="card-price">498,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-761</div><div class="card-spec">220 W — Among (2300 cm)</div><div class="card-price">685,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-781</div><div class="card-spec">350 W — Infinity (3120 cm)</div><div class="card-price">1.020,00 $</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 14-15 · SİMİT YUVARLAK -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="simit">
+  <div class="cat-section-header">
+    <div class="cat-number">14</div>
+    <div class="cat-info">
+      <h2>Yuvarlak Simit Linear</h2>
+      <p>35 CM'den 200 CM'ye · Tek yön & çift yön · Yarım ay</p>
+    </div>
+  </div>
+
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Tek Yön Simit (BDR-801)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Çap / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-801</td><td>35 CM — 30 W</td><td>100,00 $</td></tr>
+          <tr><td>BDR-802</td><td>40 CM — 30 W</td><td>110,00 $</td></tr>
+          <tr><td>BDR-803</td><td>45 CM — 45 W</td><td>125,00 $</td></tr>
+          <tr><td>BDR-804</td><td>50 CM — 40 W</td><td>150,00 $</td></tr>
+          <tr><td>BDR-805</td><td>60 CM — 50 W</td><td>160,00 $</td></tr>
+          <tr><td>BDR-806</td><td>70 CM — 60 W</td><td>187,00 $</td></tr>
+          <tr><td>BDR-807</td><td>80 CM — 70 W</td><td>215,00 $</td></tr>
+          <tr><td>BDR-808</td><td>90 CM — 80 W</td><td>240,00 $</td></tr>
+          <tr><td>BDR-809</td><td>100 CM — 90 W</td><td>269,00 $</td></tr>
+          <tr><td>BDR-810</td><td>110 CM — 100 W</td><td>282,00 $</td></tr>
+          <tr><td>BDR-811</td><td>120 CM — 110 W</td><td>313,00 $</td></tr>
+          <tr><td>BDR-812</td><td>130 CM — 120 W</td><td>355,00 $</td></tr>
+          <tr><td>BDR-813</td><td>140 CM — 130 W</td><td>375,00 $</td></tr>
+          <tr><td>BDR-814</td><td>150 CM — 140 W</td><td>410,00 $</td></tr>
+          <tr><td>BDR-815</td><td>160 CM — 150 W</td><td>430,00 $</td></tr>
+          <tr><td>BDR-816</td><td>180 CM — 160 W</td><td>485,00 $</td></tr>
+          <tr><td>BDR-817</td><td>200 CM — 180 W</td><td>538,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Çift Yön Simit (BDR-821)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Çap / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-821</td><td>40 CM — 30 W</td><td>103,00 $</td></tr>
+          <tr><td>BDR-822</td><td>50 CM — 40 W</td><td>131,00 $</td></tr>
+          <tr><td>BDR-823</td><td>60 CM — 50 W</td><td>146,00 $</td></tr>
+          <tr><td>BDR-824</td><td>70 CM — 60 W</td><td>176,00 $</td></tr>
+          <tr><td>BDR-825</td><td>80 CM — 70 W</td><td>202,00 $</td></tr>
+          <tr><td>BDR-826</td><td>90 CM — 80 W</td><td>225,00 $</td></tr>
+          <tr><td>BDR-827</td><td>100 CM — 90 W</td><td>260,00 $</td></tr>
+          <tr><td>BDR-828</td><td>110 CM — 100 W</td><td>304,00 $</td></tr>
+          <tr><td>BDR-829</td><td>120 CM — 110 W</td><td>331,00 $</td></tr>
+          <tr><td>BDR-830</td><td>130 CM — 120 W</td><td>358,00 $</td></tr>
+          <tr><td>BDR-831</td><td>140 CM — 130 W</td><td>382,00 $</td></tr>
+          <tr><td>BDR-832</td><td>150 CM — 140 W</td><td>412,00 $</td></tr>
+          <tr><td>BDR-833</td><td>180 CM — 160 W</td><td>498,00 $</td></tr>
+          <tr><td>BDR-834</td><td>200 CM — 180 W</td><td>595,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="note-box fade-in"><strong>Not:</strong> Askı takımı veya tavan montaj aparatı, rozans ile birlikte fiyata dahildir.</div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Dekoratif Simit (BDR-851) & Yarım Ay (BDR-1801)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-851</div><div class="card-spec">60 CM — 50 W Dekoratif</div><div class="card-price">300,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-852</div><div class="card-spec">80 CM — 70 W Dekoratif</div><div class="card-price">660,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-853</div><div class="card-spec">100 CM — 90 W Dekoratif</div><div class="card-price">800,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-871</div><div class="card-spec">60 CM — 50 W İç/Dış Yönlü</div><div class="card-price">168,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-872</div><div class="card-spec">70 CM — 60 W İç/Dış Yönlü</div><div class="card-price">193,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-873</div><div class="card-spec">80 CM — 70 W İç/Dış Yönlü</div><div class="card-price">222,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-874</div><div class="card-spec">90 CM — 80 W İç/Dış Yönlü</div><div class="card-price">250,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Yarım Ay Simit (BDR-1801)</div>
+    <table class="product-table">
+      <thead><tr><th>Kod</th><th>Çap / Watt</th><th>Fiyat</th></tr></thead>
+      <tbody>
+        <tr><td>BDR-1801</td><td>40 CM — 18 W</td><td>83,00 $</td></tr>
+        <tr><td>BDR-1802</td><td>50 CM — 25 W</td><td>90,00 $</td></tr>
+        <tr><td>BDR-1803</td><td>60 CM — 30 W</td><td>102,00 $</td></tr>
+        <tr><td>BDR-1804</td><td>70 CM — 40 W</td><td>118,00 $</td></tr>
+        <tr><td>BDR-1805</td><td>80 CM — 50 W</td><td>133,00 $</td></tr>
+        <tr><td>BDR-1806</td><td>90 CM — 55 W</td><td>150,00 $</td></tr>
+        <tr><td>BDR-1807</td><td>100 CM — 60 W</td><td>165,00 $</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Radius Simit 16-17 -->
+  <div class="cat-section-header" style="margin-top:60px;">
+    <div class="cat-number">16</div>
+    <div class="cat-info"><h2>Radius Simit Linear</h2><p>Altıgen · Üçgen · Dörtgen · Su Yolu · Y · X formları</p></div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Radius Altıgen (BDR-921)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-921</div><div class="card-spec">ø60 — 30 CM kenar — 50 W</div><div class="card-price">167,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-922</div><div class="card-spec">ø90 — 45 CM kenar — 80 W</div><div class="card-price">225,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-923</div><div class="card-spec">ø120 — 60 CM kenar — 105 W</div><div class="card-price">298,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Radius Kare (BDR-841) & Üçgen (BDR-861)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ölçü / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-841</td><td>40×40 — 35 W Kare</td><td>160,00 $</td></tr>
+          <tr><td>BDR-842</td><td>60×60 — 60 W Kare</td><td>242,00 $</td></tr>
+          <tr><td>BDR-843</td><td>90×90 — 90 W Kare</td><td>325,00 $</td></tr>
+          <tr><td>BDR-861</td><td>60 CM — 60 W Üçgen</td><td>172,00 $</td></tr>
+          <tr><td>BDR-862</td><td>90 CM — 90 W Üçgen</td><td>233,00 $</td></tr>
+          <tr><td>BDR-863</td><td>120 CM — 110 W Üçgen</td><td>340,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-group">
+      <div class="product-group-title">Radius Dörtgen (BDR-881) & Passion (BDR-901)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Ölçü / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-881</td><td>60×90 — 90 W</td><td>286,00 $</td></tr>
+          <tr><td>BDR-882</td><td>60×120 — 110 W</td><td>336,00 $</td></tr>
+          <tr><td>BDR-883</td><td>60×180 — 140 W</td><td>431,00 $</td></tr>
+          <tr><td>BDR-901</td><td>30×90 — 60 W Passion</td><td>220,00 $</td></tr>
+          <tr><td>BDR-902</td><td>30×120 — 75 W Passion</td><td>285,00 $</td></tr>
+          <tr><td>BDR-903</td><td>60×120 — 90 W Passion</td><td>340,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Su Yolu (BDR-941) · Radius Y (BDR-961) · Radius X (BDR-981)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-941</div><div class="card-spec">A:120/B:28 — 50 W Su Yolu</div><div class="card-price">147,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-942</div><div class="card-spec">A:150/B:28 — 60 W Su Yolu</div><div class="card-price">180,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-943</div><div class="card-spec">A:180/B:28 — 70 W Su Yolu</div><div class="card-price">205,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-944</div><div class="card-spec">A:200/B:28 — 80 W Su Yolu</div><div class="card-price">235,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-961</div><div class="card-spec">45×45×45 ø90 — 40 W Y</div><div class="card-price">161,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-962</div><div class="card-spec">60×60×60 ø120 — 55 W Y</div><div class="card-price">214,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-981</div><div class="card-spec">60×60 — 35 W X</div><div class="card-price">131,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-982</div><div class="card-spec">90×90 — 50 W X</div><div class="card-price">179,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-983</div><div class="card-spec">120×120 — 75 W X</div><div class="card-price">226,00 $</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 18-19 · RADIUS DAVUL -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="davul">
+  <div class="cat-section-header">
+    <div class="cat-number">18</div>
+    <div class="cat-info">
+      <h2>Radius Davul Linear Aydınlatma</h2>
+      <p>Yuvarlak · Dörtgen · Kare · Üçgen · Bulut · Altıgen</p>
+    </div>
+  </div>
+
+  <div class="split-table fade-in">
+    <div class="product-group">
+      <div class="product-group-title">Yuvarlak Davul (BDR-1001)</div>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Çap / Watt</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-1001</td><td>ø25 CM — 15 W</td><td>60,00 $</td></tr>
+          <tr><td>BDR-1002</td><td>ø30 CM — 20 W</td><td>65,00 $</td></tr>
+          <tr><td>BDR-1003</td><td>ø35 CM — 25 W</td><td>85,00 $</td></tr>
+          <tr><td>BDR-1004</td><td>ø40 CM — 40 W</td><td>97,00 $</td></tr>
+          <tr><td>BDR-1005</td><td>ø50 CM — 48 W</td><td>130,00 $</td></tr>
+          <tr><td>BDR-1006</td><td>ø60 CM — 65 W</td><td>160,00 $</td></tr>
+          <tr><td>BDR-1007</td><td>ø70 CM — 80 W</td><td>210,00 $</td></tr>
+          <tr><td>BDR-1008</td><td>ø80 CM — 110 W</td><td>250,00 $</td></tr>
+          <tr><td>BDR-1009</td><td>ø90 CM — 140 W</td><td>310,00 $</td></tr>
+          <tr><td>BDR-1010</td><td>ø100 CM — 175 W</td><td>376,00 $</td></tr>
+          <tr><td>BDR-1011</td><td>ø110 CM — 200 W</td><td>442,00 $</td></tr>
+          <tr><td>BDR-1012</td><td>ø120 CM — 215 W</td><td>538,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="product-group">
+        <div class="product-group-title">Radius Kare Davul (BDR-1051)</div>
+        <table class="product-table">
+          <thead><tr><th>Kod</th><th>Ölçü / Watt</th><th>Fiyat</th></tr></thead>
+          <tbody>
+            <tr><td>BDR-1051</td><td>40×40 — 40 W</td><td>125,00 $</td></tr>
+            <tr><td>BDR-1052</td><td>50×50 — 50 W</td><td>170,00 $</td></tr>
+            <tr><td>BDR-1053</td><td>60×60 — 60 W</td><td>205,00 $</td></tr>
+            <tr><td>BDR-1054</td><td>80×80 — 90 W</td><td>330,00 $</td></tr>
+            <tr><td>BDR-1055</td><td>90×90 — 130 W</td><td>410,00 $</td></tr>
+            <tr><td>BDR-1056</td><td>100×100 — 160 W</td><td>488,00 $</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="product-group" style="margin-top:24px;">
+        <div class="product-group-title">Radius Üçgen Davul (BDR-1071)</div>
+        <table class="product-table">
+          <thead><tr><th>Kod</th><th>Ölçü / Watt</th><th>Fiyat</th></tr></thead>
+          <tbody>
+            <tr><td>BDR-1071</td><td>60 CM — 40 W</td><td>143,00 $</td></tr>
+            <tr><td>BDR-1072</td><td>90 CM — 90 W</td><td>300,00 $</td></tr>
+            <tr><td>BDR-1073</td><td>120 CM — 150 W</td><td>486,00 $</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Dörtgen Davul (BDR-1021) · Passion Davul · Bulut (BDR-1101) · Altıgen (BDR-1121 / 1141)</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-1091</div><div class="card-spec">30×90 — 60 W Passion</div><div class="card-price">174,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1092</div><div class="card-spec">30×120 — 80 W Passion</div><div class="card-price">223,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1093</div><div class="card-spec">60×120 — 120 W</div><div class="card-price">349,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1101</div><div class="card-spec">45×75 — 50 W Bulut</div><div class="card-price">237,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1102</div><div class="card-spec">50×80 — 60 W Bulut</div><div class="card-price">270,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1103</div><div class="card-spec">65×100 — 75 W Bulut</div><div class="card-price">347,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1104</div><div class="card-spec">69×120 — 90 W Bulut</div><div class="card-price">413,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1105</div><div class="card-spec">80×120 — 110 W Bulut</div><div class="card-price">516,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1106</div><div class="card-spec">95×147 — 130 W Bulut</div><div class="card-price">631,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1121</div><div class="card-spec">ø60 — 55 W Altıgen</div><div class="card-price">171,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1122</div><div class="card-spec">ø90 — 12 W Altıgen</div><div class="card-price">304,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1123</div><div class="card-spec">ø120 — 210 W Altıgen</div><div class="card-price">489,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1141</div><div class="card-spec">ø60 — 55 W R.Altıgen</div><div class="card-price">171,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1142</div><div class="card-spec">ø90 — 120 W R.Altıgen</div><div class="card-price">304,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-1143</div><div class="card-spec">ø120 — 210 W R.Altıgen</div><div class="card-price">489,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="note-box fade-in"><strong>Tüm Linear Ürünlerde Özel Ölçü İmalatımız Vardır.</strong> İletişime geçiniz.</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 20 · KANOPİ & RAY SPOT -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="kanopi">
+  <div class="cat-section-header">
+    <div class="cat-number">20</div>
+    <div class="cat-info">
+      <h2>Kanopi, Ray Spot & LED Profil</h2>
+      <p>100W Kanopi · Yüksek tavan · Monofaze & trifaze ray spot · LED profil</p>
+    </div>
+  </div>
+
+  <div class="card-grid fade-in">
+    <div class="product-card"><div class="card-code">BDR-221</div><div class="card-spec">100 W Kanopi (490×490×92 mm)</div><div class="card-price">385,00 $</div></div>
+    <div class="product-card"><div class="card-code">BDR-251</div><div class="card-spec">70 W Yüksek Tavan — 100 CM</div><div class="card-price">104,00 $</div></div>
+    <div class="product-card"><div class="card-code">BDR-1401</div><div class="card-spec">40 W Ray Spot — Monofaze</div><div class="card-price">50,00 $</div></div>
+    <div class="product-card"><div class="card-code">BDR-1402</div><div class="card-spec">40 W Ray Spot — Trifaze</div><div class="card-price">56,00 $</div></div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">LED Profil (100 CM)</div>
+    <table class="product-table">
+      <thead><tr><th>Kod</th><th>Özellik</th><th>Fiyat</th></tr></thead>
+      <tbody>
+        <tr><td>BDR-241</td><td>12V/24V — 12W/MT</td><td>18,00 $</td></tr>
+        <tr><td>BDR-242</td><td>24V — 12W/MT Renkli</td><td>18,00 $</td></tr>
+        <tr><td>BDR-243</td><td>24V — 21W</td><td>18,00 $</td></tr>
+        <tr><td>BDR-244</td><td>Slim 12V/24V — 12W/MT</td><td>18,00 $</td></tr>
+        <tr><td>BDR-245</td><td>Slim 24V — 12W/MT Renkli</td><td>18,00 $</td></tr>
+        <tr><td>BDR-246</td><td>S.Ü. Köşe 12V/24V — 12W/MT</td><td>18,00 $</td></tr>
+        <tr><td>BDR-247</td><td>S.Ü. Köşe 24V — 12W/MT Renkli</td><td>18,00 $</td></tr>
+        <tr><td>BDR-248</td><td>S.A. 12V/24V — 12W/MT</td><td>18,00 $</td></tr>
+        <tr><td>BDR-249</td><td>S.A. 24V — 12W/MT Renkli</td><td>18,00 $</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 21 · BAR LED -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="bar">
+  <div class="cat-section-header">
+    <div class="cat-number">21</div>
+    <div class="cat-info">
+      <h2>Bar LED Aydınlatmalar</h2>
+      <p>Düz difüzör · 100 CM · 6500K / 3200K / 4000K renk seçenekleri</p>
+    </div>
+  </div>
+
+  <div class="card-grid fade-in">
+    <div class="product-card"><div class="card-code">BDR-1901</div><div class="card-spec">100 CM — 14 W (Dar Profil)</div><div class="card-price">19,00 $</div></div>
+    <div class="product-card"><div class="card-code">BDR-1902</div><div class="card-spec">100 CM — 14 W (Orta Profil)</div><div class="card-price">24,00 $</div></div>
+    <div class="product-card"><div class="card-code">BDR-1903</div><div class="card-spec">100 CM — 14 W (Geniş Profil)</div><div class="card-price">29,00 $</div></div>
+    <div class="product-card"><div class="card-code">BDR-1904</div><div class="card-spec">100 CM — 18 W (Kavisli Profil)</div><div class="card-price">31,00 $</div></div>
+  </div>
+  <div class="note-box fade-in">Renk seçenekleri: <strong>6500K</strong> (Soğuk Beyaz) · <strong>3200K</strong> (Sıcak Beyaz) · <strong>4000K</strong> (Nötr Beyaz)</div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 22 · FLÜT - APLİK -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="flut">
+  <div class="cat-section-header">
+    <div class="cat-number">22</div>
+    <div class="cat-info">
+      <h2>Flüt & Aplik Aydınlatmalar</h2>
+      <p>Alüminyum gövde · Opal difüzör · Çok amaçlı linear sarkit & aplik</p>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Çok Amaçlı Linear Sarkit & Aplik</div>
+    <div class="card-grid">
+      <div class="product-card"><div class="card-code">BDR-2101</div><div class="card-spec">20 CM — 8 W</div><div class="card-price">30,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-2102</div><div class="card-spec">40 CM — 16 W</div><div class="card-price">36,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-2103</div><div class="card-spec">60 CM — 24 W</div><div class="card-price">43,00 $</div></div>
+      <div class="product-card"><div class="card-code">BDR-2104</div><div class="card-spec">100 CM — 40 W</div><div class="card-price">65,00 $</div></div>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Flüt Aplik — 35 CM & 50 CM Serisi</div>
+    <div class="split-table">
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Renk</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>BDR-2001</td><td>35 CM — 7 W Gold</td><td>20,00 $</td></tr>
+          <tr><td>BDR-2002</td><td>35 CM — 7 W Krom</td><td>20,00 $</td></tr>
+          <tr><td>BDR-2003</td><td>35 CM — 7 W Beyaz</td><td>20,00 $</td></tr>
+          <tr><td>BDR-2004</td><td>35 CM — 7 W Siyah</td><td>20,00 $</td></tr>
+          <tr><td>BDR-2005</td><td>35 CM — 7 W Eskitme</td><td>21,00 $</td></tr>
+        </tbody>
+      </table>
+      <table class="product-table">
+        <thead><tr><th>Kod</th><th>Renk</th><th>Fiyat</th></tr></thead>
+        <tbody>
+          <tr><td>ESR-2006</td><td>50 CM — 10 W Gold</td><td>43,00 $</td></tr>
+          <tr><td>BDR-2007</td><td>50 CM — 10 W Krom</td><td>43,00 $</td></tr>
+          <tr><td>BDR-2008</td><td>50 CM — 10 W Beyaz</td><td>43,00 $</td></tr>
+          <tr><td>BDR-2009</td><td>50 CM — 10 W Siyah</td><td>43,00 $</td></tr>
+          <tr><td>BDR-2010</td><td>50 CM — 10 W Eskitme</td><td>43,00 $</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- 23-24 · KUYUMCU -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="cat-section" id="kuyumcu">
+  <div class="cat-section-header">
+    <div class="cat-number">23</div>
+    <div class="cat-info">
+      <h2>Kuyumcu Aydınlatma Armatürleri</h2>
+      <p>Vitrin & tezgah aydınlatma · Yüksek CRI · Özel lens seçenekleri</p>
+    </div>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Sıva Altı Kuyumcu Armatürleri</div>
+    <table class="product-table">
+      <thead><tr><th>Kod</th><th>Ürün / Watt</th><th>Fiyat</th></tr></thead>
+      <tbody>
+        <tr><td>BDR-1301</td><td>31×6 cm — Kesim: 30×55 cm / 20 W</td><td>74,99 $</td></tr>
+        <tr><td>BDR-1302</td><td>26×10 cm — Kesim: 24,5×9 cm / 25 W</td><td>94,27 $</td></tr>
+        <tr><td>BDR-1303</td><td>33×18 cm — Kesim: 31×16 cm / 50 W</td><td>162,84 $</td></tr>
+        <tr><td>BDR-1304</td><td>33×18 cm — Kesim: 31×16 cm / 54 W</td><td>162,84 $</td></tr>
+        <tr><td>BDR-1305</td><td>33×18 cm — Kesim: 30×16 cm / 65 W</td><td>188,55 $</td></tr>
+        <tr><td>BDR-1306</td><td>37×23 cm — Kesim: 33×21 cm / 50 W</td><td>179,98 $</td></tr>
+        <tr><td>BDR-1307</td><td>33×18×6 cm / 50 W</td><td>171,41 $</td></tr>
+        <tr><td>BDR-1308</td><td>12 cm — Kesim: 11 cm / 10 W</td><td>59,99 $</td></tr>
+        <tr><td>BDR-1309</td><td>15,5 cm — Kesim: 14 cm / 22 W</td><td>87,85 $</td></tr>
+        <tr><td>BDR-1310</td><td>19 cm — Kesim: 17 cm / 36 W</td><td>111,42 $</td></tr>
+        <tr><td>BDR-1311</td><td>23 cm — Kesim: 20 cm / 44 W</td><td>162,84 $</td></tr>
+        <tr><td>BDR-1312</td><td>19×16 cm Silindir / 44 W</td><td>197,12 $</td></tr>
+        <tr><td>BDR-1313</td><td>13×13 cm — Kesim: 11×11 cm / 16 W</td><td>68,56 $</td></tr>
+        <tr><td>BDR-1314</td><td>16×16 cm — Kesim: 14,5×14,5 cm / 29 W</td><td>98,56 $</td></tr>
+        <tr><td>BDR-1315</td><td>22×22 cm — Kesim: 19×19 cm / 54 W</td><td>162,84 $</td></tr>
+        <tr><td>BDR-1316</td><td>22×22×6 cm / 54 W</td><td>171,41 $</td></tr>
+        <tr><td>BDR-1317</td><td>Yuvarlak ø23 / Dikdörtgen 32×21 / Kare 24×24 cm</td><td>942,74 $</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="product-group fade-in">
+    <div class="product-group-title">Metre Bazlı Kuyumcu Armatürleri (Fiyat/Metre)</div>
+    <table class="product-table">
+      <thead><tr><th>Kod</th><th>Özellik</th><th>Fiyat (M)</th></tr></thead>
+      <tbody>
+        <tr><td>BDR-1318</td><td>Döner Aparatlı, Kasalı, Lensli — 36 W/m</td><td>128,56 $</td></tr>
+        <tr><td>BDR-1319</td><td>1 Metre — 36 W</td><td>87,13 $</td></tr>
+        <tr><td>BDR-1320</td><td>1 Metre — 36 W</td><td>107,13 $</td></tr>
+        <tr><td>BDR-1321</td><td>1 Metre — 36 W</td><td>171,41 $</td></tr>
+        <tr><td>BDR-1322</td><td>1 Metre — 72 W</td><td>321,39 $</td></tr>
+        <tr><td>BDR-1323</td><td>1 Metre — 108 W</td><td>437,09 $</td></tr>
+        <tr><td>BDR-1324</td><td>1 Metre — 144 W</td><td>582,79 $</td></tr>
+        <tr><td>BDR-1325</td><td>1 Metre — 144 W</td><td>792,76 $</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- FOOTER / İLETİŞİM -->
+<!-- ═══════════════════════════════════════════ -->
+<footer id="iletisim">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-wrap">
+        <div class="logo-icon">BDR</div>
+        <div>
+          <span class="logo-text">BEDİR Aydınlatma Elektrik</span>
+          <span class="logo-sub">Estetik, Sağlam ve Rengarenk</span>
+        </div>
+      </div>
+      <p>İç ve dış mekan özel tasarım aydınlatmalarında 2026 yılı ürün kataloğu. ISO 9001:2015 & ISO 14001:2015 sertifikalı, yerli üretim kalite garantisi ile.</p>
+    </div>
+    <div class="footer-col">
+      <h4>İletişim</h4>
+      <p>Tel: 0538 740 73 18</p>
+      <p>Tel: 0530 866 28 18</p>
+      <a href="mailto:"></a>
+      <a href="http://www.aydinlatmaavm.com" target="_blank">www.aydinlatmaavm.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Adres</h4>
+      <p>Bereketzade Mh. Okçu Musa Cd.</p>
+      <p>Şair Eşref Paşa Sk. Kat:3 D:14–15</p>
+      <p>Karaköy — İSTANBUL</p>
+      <a href="#">Instagram: @</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BEDİR Aydınlatma Elektrik — Tüm hakları saklıdır.</p>
+    <div class="cert-badges">
+      <span class="cert-badge">ISO 10002</span>
+      <span class="cert-badge">ISO 9001:2015</span>
+      <span class="cert-badge">ISO 14001:2015</span>
+      <span class="cert-badge">Ra > 80</span>
+      <span class="cert-badge">CE</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.05 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Back to top
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('show', window.scrollY > 400);
+  });
+
+  // Smooth scroll helper
+  function scrollTo(id) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Active cat nav
+  const catBtns = document.querySelectorAll('.cat-btn');
+  catBtns.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
